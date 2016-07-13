@@ -7,6 +7,15 @@
                android:supportsRtl="true"
                android:theme="@style/AppTheme">
 
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/api_key">
+    </meta-data>
+
+    <activity
+      android:name="com.beijunyi.pkmgwalker.MapsActivity"
+      android:label="@string/app_name"
+      android:exported="true">
+    </activity>
+
   </application>
 
 </manifest>

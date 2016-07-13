@@ -1,15 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion 22
-  buildToolsVersion "22.0.1"
+  sourceCompatibility = 1.8
+  targetCompatibility = 1.8
+  compileSdkVersion 24
+  buildToolsVersion "24"
 
   defaultConfig {
     applicationId "com.beijunyi.pkmgwalker"
     minSdkVersion 19
-    targetSdkVersion 22
+    targetSdkVersion 24
     versionCode 1
     versionName "1.0"
+    multiDexEnabled true
   }
   buildTypes {
     release {
@@ -20,7 +23,7 @@ android {
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile fileTree(include: ['*.jar'], dir: 'libs')
   testCompile 'junit:junit:4.12'
-  compile 'com.android.support:appcompat-v7:22.+'
+  compile 'com.google.android.gms:play-services:9.2.1'
 }
