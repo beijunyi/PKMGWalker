@@ -7,31 +7,31 @@ import android.view.MenuItem;
 import android.widget.TabHost;
 
 public class MainActivity extends AppCompatActivity {
-    TabHost tabHost;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TabHost host = (TabHost)findViewById(R.id.tabHost);
+        TabHost host = (TabHost)findViewById(R.id.tab_host);
         host.setup();
 
         //Tab 1
-        TabHost.TabSpec spec = host.newTabSpec("Tab One");
-        spec.setContent(R.id.tab1);
-        spec.setIndicator("Tab One");
+        TabHost.TabSpec spec = host.newTabSpec("Fast Travel");
+        spec.setContent(R.id.fast_travel);
+        spec.setIndicator("Fast Travel");
         host.addTab(spec);
 
         //Tab 2
-        spec = host.newTabSpec("Tab Two");
-        spec.setContent(R.id.tab2);
-        spec.setIndicator("Tab Two");
+        spec = host.newTabSpec("Route Follow");
+        spec.setContent(R.id.route_follow);
+        spec.setIndicator("Route Follow");
         host.addTab(spec);
 
         //Tab 3
-        spec = host.newTabSpec("Tab Three");
-        spec.setContent(R.id.tab3);
-        spec.setIndicator("Tab Three");
+        spec = host.newTabSpec("Random Walk");
+        spec.setContent(R.id.random_walk);
+        spec.setIndicator("Random Walk");
         host.addTab(spec);
     }
 
